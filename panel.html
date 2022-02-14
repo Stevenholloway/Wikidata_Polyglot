@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entity Explosion</title>
+
+
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./font-awesome.min.css">
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+
+</head>
+<body style = "min-width: 400px; max-width: 500px;">
+
+
+ <!-- <div class="container" style="margin-bottom: 50px;"> -->
+  <div style="margin-bottom: 0px;">
+
+    <!-- here is where the lookup URL and WD item will be displayed -->
+    <div id="div0" style="word-wrap: break-word;"></div>
+    <div class="form-horizontal input-group-addon">
+    <!-- <form class="form-inline" role="form"> -->
+
+        <div class="form-group">
+            <label for="box0" class="col-sm-4 control-label" id="boxLabel0">select language:</label>
+					<!--	<label for="box0" class="col-sm-4 control-label" id="boxLabel0">language/língua/Sprache/idioma/语言/言語</label> -->
+            <div class="col-sm-5">
+                <select name="languageDropdown" id="box0" class="form-control">
+                  <!-- this list was originally compiled from data from https://w.wiki/XU5 -->
+                  <!-- now it is automatically loaded when background.js runs a query and gets all the languages back from WD -->
+				  <!--<option value='en' selected='selected'>English</option>-->
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="box1" class="col-sm-4 control-label" id="boxLabel1">select result:</label>
+            <div class="col-sm-5">
+                <select name="statusDropdown" id="box1" class="form-control">
+                    <option value='' selected='selected'>(Select)</option>
+                </select>
+            </div>
+        </div>
+
+        <i id="searchSpinner" class="fa fa-spinner fa-spin fa-lg"></i>
+    </div>
+
+     <!--Here is where the info gets inserted-->
+    <div id="div_title" style="background-color:#FFFFFF;padding:0px"></div>
+    <!--<div id="div_title" style="background-color:#FFFFFF;padding:20px;padding-top:0px;padding-bottom:10px;padding-right:0px;"></div> -->
+    <div id="div_wdlink" style="background-color:#EEEEEE;padding:5px;padding-bottom:0px;"></div>
+    <div id="div_wiki" style="background-color:#EEEEEE;padding:5px;padding-top:0px;"></div>
+    <div id="div1" style="background-color:#FFFFFF;padding:5px;"></div>
+    <div id="div2" style="background-color:#FFFFFF;padding:5px;"></div>
+    <div id="div3" style="background-color:#EEEEEE;padding:5px;"></div>
+
+	<div class="container" style="width:100%">
+	    <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Wikidata-logo.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/320px-Wikidata-logo.svg.png" width=40px style="float:right;"></a>
+	    <div id="div_footer1" style="margin:0px; text-align:left; font-size:x-small">
+        Live data provided by this extension is from <a target="_blank" href="https://www.wikidata.org/">Wikidata</a><sup>TM</sup> and is licensed <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>
+        </div>
+	    <div id="div_footer2" style="margin:0px; text-align:left; font-size:x-small">
+        <a target="_blank" href="https://www.wikidata.org/wiki/Wikidata:Entity_Explosion"><span id="ExtensionName">Entity Explosion</span></a> version <span id="ExtensionVersion">0.0</span> <span>by Steven W. Holloway, based on an extension created by Toby Hudson</span>
+        </div>
+    </div>
+
+   	<!-- </div> /.container -->
+	<script src="item-properties.js"></script>
+</body>
+</html>
