@@ -9,7 +9,7 @@ function notifyItemProperties(e) {
   }
   if (target.tagName != "A")
     return;
-  console.log("content script in Entity Explosion-MOD sending message:", target.href);
+  console.log("content script sending message:", target.href);
   chrome.runtime.sendMessage({"mouseoverURL": target.href});
 }
 /*
